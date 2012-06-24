@@ -1,6 +1,10 @@
-colorscheme desert
+colorscheme molokai
+syntax enable
+set guifont=Inconsolata:h14
+set background=dark
 set anti
 set lines=999 columns=84
+set linespace=4
 set guioptions=egmrt
 
 " Command + t to :CommandT
