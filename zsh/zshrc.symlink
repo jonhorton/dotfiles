@@ -42,7 +42,7 @@ plugins=(rails git github ruby rvm ajd cloudapp brew heroku pow sublime)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+eval "$(rbenv init -)"
 
 export CC=/usr/bin/gcc-4.2
 export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules
