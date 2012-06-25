@@ -1,3 +1,3 @@
-[submodule "/Users/drew.delianides/.dotfiles/zsh/oh-my-zsh.symlink"]
-	path = /Users/drew.delianides/.dotfiles/zsh/oh-my-zsh.symlink
+[submodule "~/.dotfiles/zsh/oh-my-zsh.symlink"]
+	path = ~/.dotfiles/zsh/oh-my-zsh.symlink
 	url = git://github.com/robbyrussell/oh-my-zsh.git
