@@ -1,3 +1,6 @@
 [submodule "~/.dotfiles/zsh/oh-my-zsh.symlink"]
 	path = ~/.dotfiles/zsh/oh-my-zsh.symlink
 	url = git://github.com/robbyrussell/oh-my-zsh.git
+[submodule "~/.dotfiles/ruby/rbenv.symlink"]
+	path = ~/.dotfiles/ruby/rbenv.symlink
+	url = git://github.com/sstephenson/rbenv.git
