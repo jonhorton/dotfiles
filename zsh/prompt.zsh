@@ -43,7 +43,25 @@ need_push () {
 rb_prompt(){
   if $(which rbenv &> /dev/null)
   then
-	  echo "%{$fg_bold[yellow]%}$(rbenv version | awk '{print $1}')%{$reset_color%}"
+    echo "%{$fg_bold[yellow]%}$(rbenv version | awk '{print $1}')%{$reset_color%}"
+	else
+	  echo ""
+  fi
+}
+
+dumb_need_push () {
+  if [[ $(unpushed) == "" ]]
+  then
+    echo " "
+  else
+    echo " with %unpushed% "
+  fi
+}
+
+dumb_prompt(){
+  if $(which rbenv &> /dev/null)
+  then
+    echo "%{$(rbenv version | awk '{print $1}')%}"
 	else
 	  echo ""
   fi
@@ -68,11 +86,20 @@ todo(){
   fi
 }
 
+dumb_directory_name(){
+  echo "%1/%\/"
+}
+
 directory_name(){
   echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
 }
 
 export PROMPT=$'\n$(rb_prompt) in $(directory_name) $(git_dirty)$(need_push)\n› '
+
+if [ $TERM = 'dumb' ]; then
+  export PROMPT=$'\n$(dumb_prompt) in $(dumb_directory_name) | $(git_branch)$(dumb_need_push)\n› '
+fi
+
 set_prompt () {
   export RPROMPT="%{$fg_bold[cyan]%}$(todo)%{$reset_color%}"
 }

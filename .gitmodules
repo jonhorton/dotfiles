@@ -4,3 +4,9 @@
 [submodule "~/.dotfiles/ruby/rbenv.symlink"]
 	path = ~/.dotfiles/ruby/rbenv.symlink
 	url = git://github.com/sstephenson/rbenv.git
+[submodule "~/.dotfiles/vim/vim.symlink/bundle/snipmate"]
+	path = ~/.dotfiles/vim/vim.symlink/bundle/snipmate
+	url = git://github.com/msanders/snipmate.vim.git
+[submodule "~/.dotfiles/vim/vim.symlink/bundle/zencoding"]
+	path = ~/.dotfiles/vim/vim.symlink/bundle/zencoding
+	url = git://github.com/mattn/zencoding-vim.git
