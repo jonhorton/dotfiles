@@ -4,9 +4,6 @@ else
   export PS1='%3~$(git_info_for_prompt)%# '
 fi
 
-#TODO: Added support for dumb terminal
-
-[[ -z "$LSCOLORS" ]] && export LSCOLORS=“Gxfxcxdxbxegedabagacad”
 export CLICOLOR=true
 
 fpath=($ZSH/zsh/functions $fpath)
