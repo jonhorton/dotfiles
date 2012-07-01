@@ -35,6 +35,12 @@ nmap <d-7> 7gt
 nmap <d-8> 8gt
 nmap <d-9> 9gt
 
+" Cycle between Windows
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
 " Emulate Textmate Shift Left/right
 nmap <D-[> <<
 nmap <D-]> >>
