@@ -8,7 +8,6 @@ endif
 " Source the vimrc file after saving it
 if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
-  autocmd bufwritepost .gvimrc source $MYGVIMRC  
 endif
 
 
@@ -18,9 +17,11 @@ endif
 " This loads all the plugins in ~/.vim/bundle
 " Use tpope's pathogen plugin to manage all other plugins
 
-  runtime bundle/tpope-vim-pathogen/autoload/pathogen.vim
-  call pathogen#infect()
+  runtime ~/.vim/autoload/pathogen.vim
+  call pathogen#infect('~/.vim/bundle')
   call pathogen#helptags()
+
+  let g:snippets_dir = "~/.vim/bundle/snipmate/snippets"
 
 " ----------------------------------------------------------------------------
 "  Text Formatting
@@ -66,9 +67,65 @@ vnoremap <Up> gk
 inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
 
+" Open Command+T in a new tab
+let g:CommandTAcceptSelectionTabMap='<CR>'
+
+" C-TAB and C-SHIFT-TAB cycle tabs forward and backward
+nmap <c-tab> :tabnext<cr>
+imap <c-tab> <c-o>:tabnext<cr>
+vmap <c-tab> <c-o>:tabnext<cr>
+nmap <c-s-tab> :tabprevious<cr>
+imap <c-s-tab> <c-o>:tabprevious<cr>
+vmap <c-s-tab> <c-o>:tabprevious<cr>
+
+" C-# switches to tab
+nmap <d-1> 1gt
+nmap <d-2> 2gt
+nmap <d-3> 3gt
+nmap <d-4> 4gt
+nmap <d-5> 5gt
+nmap <d-6> 6gt
+nmap <d-7> 7gt
+nmap <d-8> 8gt
+nmap <d-9> 9gt
+
+" Cycle between Windows
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" Emulate Textmate Shift Left/right
+nmap <D-[> <<
+nmap <D-]> >>
+vmap <D-[> <gv
+vmap <D-]> >gv
+
+" Emulate Textmate Swap Lines
+"nmap <S-D-UP> ddp
+"nmap <S-D-DOWN> ddkP
+"imap <S-D-UP> <Esc>:m+<CR>==gi
+"imap <S-D-DOWN> <Esc>:m-2<CR>==gi
+"vmap <S-D-UP> :m'>+<CR>gv=gv
+"vmap <S-D-DOWN> :m-2<CR>gv=gv
+
 " ----------------------------------------------------------------------------
 "  UI
 " ----------------------------------------------------------------------------
+colorscheme molokai
+syntax enable
+set guifont=Inconsolata:h14
+set background=dark
+set anti
+set lines=999 columns=84
+set linespace=4
+set guioptions=egmrt
+
+" Command + t to :CommandT
+if has("gui_macvim")
+  macmenu &File.New\ Tab key=<nop>
+  map <D-t> :CommandT<CR>
+endif
 
 set ruler                  " show the cursor position all the time
 set noshowcmd              " don't display incomplete commands
@@ -82,7 +139,6 @@ set whichwrap+=<,>,h,l,[,] " backspace and cursor keys wrap to
 set shortmess=filtIoOA     " shorten messages
 set report=0               " tell us about changes
 set nostartofline          " don't jump to the start of line when scrolling
-
 
 " ----------------------------------------------------------------------------
 " Visual Cues

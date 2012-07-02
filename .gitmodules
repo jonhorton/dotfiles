@@ -1,12 +1,6 @@
-[submodule "~/.dotfiles/zsh/oh-my-zsh.symlink"]
-	path = ~/.dotfiles/zsh/oh-my-zsh.symlink
-	url = git://github.com/robbyrussell/oh-my-zsh.git
 [submodule "~/.dotfiles/ruby/rbenv.symlink"]
 	path = ~/.dotfiles/ruby/rbenv.symlink
 	url = git://github.com/sstephenson/rbenv.git
-[submodule "~/.dotfiles/vim/vim.symlink/bundle/snipmate"]
-	path = ~/.dotfiles/vim/vim.symlink/bundle/snipmate
-	url = git://github.com/msanders/snipmate.vim.git
 [submodule "~/.dotfiles/vim/vim.symlink/bundle/zencoding"]
 	path = ~/.dotfiles/vim/vim.symlink/bundle/zencoding
 	url = git://github.com/mattn/zencoding-vim.git
@@ -16,3 +10,15 @@
 [submodule "~/.dotfiles/vim/vim.symlink/bundle/webapi-vim"]
 	path = ~/.dotfiles/vim/vim.symlink/bundle/webapi-vim
 	url = git://github.com/mattn/webapi-vim.git
+[submodule "~/.dotfiles/vim/vim.symlink/bundle/vim-snipmate"]
+	path = ~/.dotfiles/vim/vim.symlink/bundle/vim-snipmate
+	url = git://github.com/garbas/vim-snipmate.git
+[submodule "~/.dotfiles/vim/vim.symlink/bundle/tlib_vim"]
+	path = ~/.dotfiles/vim/vim.symlink/bundle/tlib_vim
+	url = https://github.com/tomtom/tlib_vim.git
+[submodule "~/.dotfiles/vim/vim.symlink/bundle/vim-addon-mw-utils"]
+	path = ~/.dotfiles/vim/vim.symlink/bundle/vim-addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "~/.dotfiles/vim/vim.symlink/bundle/snipmate-snippets"]
+	path = ~/.dotfiles/vim/vim.symlink/bundle/snipmate-snippets
+	url = https://github.com/honza/snipmate-snippets.git
