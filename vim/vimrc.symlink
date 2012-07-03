@@ -101,6 +101,8 @@ nmap <D-]> >>
 vmap <D-[> <gv
 vmap <D-]> >gv
 
+nmap <leader>b :JSBeautify<cr>
+
 " Emulate Textmate Swap Lines
 "nmap <S-D-UP> ddp
 "nmap <S-D-DOWN> ddkP
@@ -108,6 +110,18 @@ vmap <D-]> >gv
 "imap <S-D-DOWN> <Esc>:m-2<CR>==gi
 "vmap <S-D-UP> :m'>+<CR>gv=gv
 "vmap <S-D-DOWN> :m-2<CR>gv=gv
+
+
+" ----------------------------------------------------------------------------
+" JS BEAUTIFY
+" ----------------------------------------------------------------------------
+  let g:jsbeautify_engine = "node"
+
+  let g:jsbeautify = {'indent_size': 4, 'indent_char': '\t'}
+  let g:htmlbeautify = {'indent_size': 4, 'indent_char': ' ', 'max_char': 78, 'brace_style': 'expand', 'unformatted': ['a', 'sub', 'sup', 'b', 'i', 'u']}
+  let g:cssbeautify = {'indent_size': 4, 'indent_char': ' '}
+
+  map <leader>b :call JsBeautify()<cr>
 
 " ----------------------------------------------------------------------------
 "  UI
