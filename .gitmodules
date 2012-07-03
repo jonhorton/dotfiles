@@ -22,3 +22,6 @@
 [submodule "~/.dotfiles/vim/vim.symlink/bundle/snipmate-snippets"]
 	path = ~/.dotfiles/vim/vim.symlink/bundle/snipmate-snippets
 	url = https://github.com/honza/snipmate-snippets.git
+[submodule "~/.dotfiles/vim/vim.symlink/bundle/vim-js-beautify"]
+	path = ~/.dotfiles/vim/vim.symlink/bundle/vim-js-beautify
+	url = https://github.com/bigfish/vim-js-beautify.git
