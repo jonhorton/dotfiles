@@ -1,2 +1,4 @@
+.DS_Store
 vim/vim.symlink/.netrwhist
 git/gitconfig.symlink
+ruby/rbenv.symlink
