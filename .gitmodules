@@ -1,5 +1,5 @@
-[submodule "~/.dotfiles/ruby/rbenv.symlink"]
-	path = ~/.dotfiles/ruby/rbenv.symlink
+[submodule "ruby/rbenv.symlink"]
+	path = ruby/rbenv.symlink
 	url = git://github.com/sstephenson/rbenv.git
 [submodule "vim/janus.symlink/vim-jsbeautify"]
 	path = vim/janus.symlink/vim-jsbeautify
