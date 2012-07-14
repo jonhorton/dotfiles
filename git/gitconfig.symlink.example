@@ -8,8 +8,8 @@
 # install this to the correct location by running the project's main `rake`
 # task.
 [user]
-  name = <YOUR NAME> 
-	email = <YOUR EMAIL>
+  name = Drew Delianides 
+	email = drew@drewco.de
 [alias]
   co = checkout
   promote = !$ZSH/bin/git-promote
@@ -27,7 +27,7 @@
 [apply]
   whitespace = nowarn
 [github]
-  user = <USERNAME>
+  user = drewcode
 [mergetool]
   keepBackup = false
 
