@@ -60,4 +60,4 @@ task :uninstall do
   end
 end
 
-task :default => 'install'
+task :default => 'first_install'
