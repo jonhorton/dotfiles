@@ -1,10 +1,6 @@
 set noswapfile
 set nocompatible
 
-if filereadable(expand("~/.vimrc.before"))
-  source ~/.vimrc.before
-endif
-
 " Source the vimrc file after saving it
 if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
@@ -16,11 +12,6 @@ endif
 " ----------------------------------------------------------------------------
 " This loads all the plugins in ~/.vim/bundle
 " Use tpope's pathogen plugin to manage all other plugins
-
-  runtime ~/.vim/autoload/pathogen.vim
-  call pathogen#infect('~/.vim/bundle')
-  call pathogen#helptags()
-
   let g:snippets_dir = "~/.vim/bundle/snipmate/snippets"
   let g:html5_event_handler_attributes_complete = 0
   let g:html5_rdfa_attributes_complete = 0
