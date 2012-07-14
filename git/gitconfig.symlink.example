@@ -8,8 +8,8 @@
 # install this to the correct location by running the project's main `rake`
 # task.
 [user]
-  name = Drew Delianides
-	email = drew@drewco.de
+  name = <YOUR NAME> 
+	email = <YOUR EMAIL>
 [alias]
   co = checkout
   promote = !$ZSH/bin/git-promote
@@ -27,9 +27,12 @@
 [apply]
   whitespace = nowarn
 [github]
-  user = drewcode
+  user = <USERNAME>
 [mergetool]
   keepBackup = false
+
+# REMOVE THE FOLLOWING IF YOU DON'T USE KALEIDOSCOPE
+
 [credential]
 	helper = osxkeychain
 [difftool "Kaleidoscope"]

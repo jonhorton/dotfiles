@@ -1,6 +1,12 @@
 require 'rake'
 
 desc "Hook our dotfiles into system-standard positions."
+task :first_install do
+  'curl -Lo- https://bit.ly/janus-bootstrap | bash'
+  Rake::Task["install"].execute
+  `git submodule update --init --recursive`  
+end
+
 task :install do
   linkables = Dir.glob('*/**{.symlink}')
 
