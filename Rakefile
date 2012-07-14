@@ -4,7 +4,7 @@ desc "Hook our dotfiles into system-standard positions."
 task :first_install do
   'curl -Lo- https://bit.ly/janus-bootstrap | bash'
   Rake::Task["install"].execute
-  `git submodule update --init --recursive`  
+  `git submodule update --init --recursive`
 end
 
 task :install do
@@ -38,6 +38,7 @@ task :install do
     end
     `ln -s "$PWD/#{linkable}" "#{target}"`
   end
+  source ~/.zshrc
 end
 
 task :uninstall do
