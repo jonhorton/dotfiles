@@ -1,13 +1,14 @@
 require 'rake'
 
 desc "Hook our dotfiles into system-standard positions."
-task :first_install do
-  'curl -Lo- https://bit.ly/janus-bootstrap | bash'
-  Rake::Task["install"].execute
-  `git submodule update --init --recursive`
-end
-
 task :install do
+  puts "First Installation? [Y]es or [N]o?"
+  if STDIN.gets.chomp == 'y' || 'Y'
+    puts "Installing Janus..."
+    sh "curl -Lo- https://bit.ly/janus-bootstrap | bash"
+    puts "Janus Installed!"  
+  end
+
   linkables = Dir.glob('*/**{.symlink}')
 
   skip_all = false
@@ -38,7 +39,6 @@ task :install do
     end
     `ln -s "$PWD/#{linkable}" "#{target}"`
   end
-  `source ~/.zshrc`
 end
 
 task :uninstall do
@@ -61,4 +61,4 @@ task :uninstall do
   end
 end
 
-task :default => 'first_install'
+task :default => 'install'
