@@ -2,12 +2,12 @@ require 'rake'
 
 desc "Hook our dotfiles into system-standard positions."
 task :install do
-  puts "First Installation? [Y]es or [N]o?"
-  if STDIN.gets.chomp == 'y' || 'Y'
-    puts "Installing Janus..."
-    sh "curl -Lo- https://bit.ly/janus-bootstrap | bash"
-    puts "Janus Installed!"  
-  end
+  #puts "First Installation? [Y]es or [N]o?"
+  #if STDIN.gets.chomp == 'y' || 'Y'
+    #puts "Installing Janus..."
+    #sh "curl -Lo- https://bit.ly/janus-bootstrap | bash"
+    #puts "Janus Installed!"  
+  #end
 
   linkables = Dir.glob('*/**{.symlink}')
 

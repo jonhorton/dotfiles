@@ -18,8 +18,11 @@ If you're interested in the philosophy behind why projects like these are
 awesome, you might want to [read Zach Holman's post on the
 subject](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
 
-## install
+## installation
 
+For VIM, I modified Zach Holman's dotfiles to use [Janus](https://github.com/carlhuda/janus). Most of the plugins you would want will be loaded from there. Eventually I want to modify the Rakefile to detect a first time installation and run the Janus installation script. For now, just do the following.
+
+- `curl -Lo- https://bit.ly/janus-bootstrap | bash`
 - `git clone git://github.com/holman/dotfiles ~/.dotfiles`
 - `cd ~/.dotfiles`
 - `rake install`
@@ -30,6 +33,16 @@ though.
 
 The main file you'll want to change right off the bat is `zsh/zshrc.symlink`,
 which sets up a few paths that'll be different on your particular machine.
+
+## Janus
+
+Janus is installed directly from its repository so it can always be
+updated.  Nothing has been modified.  You can add any plugins you want
+to the `~/.janus` directory in your home folder.  It works just like
+pathogen; Vim will source anything you add from that folder.  Any
+special commands or keymappings should be added to the `~/.vimrc.after`
+or `~/.vimrc.before` files. Janus will source those AFTER it loads its
+default `.vimrc` file. 
 
 ## topical
 
@@ -79,10 +92,14 @@ said, I do use this as *my* dotfiles, so there's a good chance I may break
 something if I forget to make a check for a dependency.
 
 If you're brand-new to the project and run into any blockers, please
-[open an issue](https://github.com/holman/dotfiles/issues) on this repository
+[open an issue](https://github.com/drewcode/dotfiles/issues) on this repository
 and I'd love to get it fixed for you!
 
-## thanks
+## thanks from drewcode
+
+I tried a few different dotfiles as starting points but [Zach Holman's](http://github.com/holman) [dotfiles](http://github.com/holman/dotfiles) seemed to make the most sense and it was easily changed. Thanks for making it easy!
+
+## thanks from holman
 
 I forked [Ryan Bates](http://github.com/ryanb)' excellent
 [dotfiles](http://github.com/ryanb/dotfiles) for a couple years before the
