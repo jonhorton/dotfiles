@@ -38,7 +38,7 @@ task :install do
     end
     `ln -s "$PWD/#{linkable}" "#{target}"`
   end
-  source ~/.zshrc
+  `source ~/.zshrc`
 end
 
 task :uninstall do
