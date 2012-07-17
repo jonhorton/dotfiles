@@ -99,13 +99,14 @@ vmap <D-]> >gv
 nmap <leader>b :JSBeautify<cr>
 
 " Emulate Textmate Swap Lines
-"nmap <S-D-UP> ddp
-"nmap <S-D-DOWN> ddkP
-"imap <S-D-UP> <Esc>:m+<CR>==gi
-"imap <S-D-DOWN> <Esc>:m-2<CR>==gi
-"vmap <S-D-UP> :m'>+<CR>gv=gv
-"vmap <S-D-DOWN> :m-2<CR>gv=gv
+" Bubble single lines
+nmap <C-Up> [e
+nmap <C-Down> ]e
+" Bubble multiple lines
+vmap <C-Up> [egv
+vmap <C-Down> ]egv
 
+" Visually select the text that was the last edited/pasted
 
 " ----------------------------------------------------------------------------
 " JS BEAUTIFY
