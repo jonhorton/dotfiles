@@ -12,6 +12,7 @@ ZSH_THEME="gallois"
 # Example aliases
 alias zshconfig="mvim ~/.zshrc"
 alias ohmyzsh="mvim ~/.oh-my-zsh"
+alias reload="source $ZSH/oh-my-zsh.sh"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -31,7 +32,7 @@ alias ohmyzsh="mvim ~/.oh-my-zsh"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rails ruby rbenv gem heroku github brew cloudapp npm osx pow rails3 rbenv rake terminalapp bundler vi-mode)
+plugins=(git rails ruby rbenv rake gem heroku github brew cloudapp npm osx pow rails3 rbenv terminalapp vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
