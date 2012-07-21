@@ -17,8 +17,7 @@ curl -Lo- https://bit.ly/janus-bootstrap | sh;
 echo "\033[0;34mCloning dotfiles...\033[0m"
 hash git >/dev/null && /usr/bin/env git clone --recursive https://github.com/drewcode/dotfiles.git ~/.dotfiles || die "Git not installed!"
 
-if [ -d ~/.dotfiles ]
-then
- cd $HOME/.dotfiles && rake install || die "Cannot run rake!"
-fi
+cd $HOME/.dotfiles;
+rake install
+
 
