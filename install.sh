@@ -22,7 +22,6 @@ hash git >/dev/null && /usr/bin/env git clone --recursive https://github.com/dre
 
 if [ -d ~/.dotfiles ]
 then
- cd $HOME/.dotfiles || die "Could not go into the ${HOME}/.dotfiles"
- rake || die "Rake failed."
+ cd $HOME/.dotfiles && rake install
 fi
 
