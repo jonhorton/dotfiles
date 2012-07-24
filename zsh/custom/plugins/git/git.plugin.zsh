@@ -20,6 +20,7 @@ compdef _git gco=git-checkout
 alias gcm='git checkout master'
 alias gb='git branch'
 compdef _git gb=git-branch
+alias gbv='gbrt'
 alias gba='git branch -a'
 compdef _git gba=git-branch
 alias gcount='git shortlog -sn'
@@ -36,6 +37,7 @@ alias ga='git add'
 compdef _git ga=git-add
 alias gm='git merge'
 compdef _git gm=git-merge
+alias gmf='git merge --no-ff'
 alias grh='git reset HEAD'
 alias grhh='git reset HEAD --hard'
 
