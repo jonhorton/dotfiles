@@ -122,7 +122,7 @@ vmap <C-Down> ]egv
 " ----------------------------------------------------------------------------
 "  UI
 " ----------------------------------------------------------------------------
-colorscheme molokai
+colorscheme FriendshipBracelet
 syntax enable
 set guifont=Inconsolata:h14
 set background=dark
