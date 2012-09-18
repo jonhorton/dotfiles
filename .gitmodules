@@ -4,3 +4,6 @@
 [submodule "vim/janus.symlink/vim-jsbeautify"]
 	path = vim/janus.symlink/vim-jsbeautify
 	url = git://github.com/maksimr/vim-jsbeautify.git
+[submodule "vim/janus.symlink/vim-ee"]
+	path = vim/janus.symlink/vim-ee
+	url = git://github.com/farneman/Expression-Engine-Vim-syntax.git
