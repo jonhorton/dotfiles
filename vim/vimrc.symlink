@@ -6,17 +6,56 @@ if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
 
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
-" ----------------------------------------------------------------------------
-" Pathogen Initialization
-" ----------------------------------------------------------------------------
-" This loads all the plugins in ~/.vim/bundle
-" Use tpope's pathogen plugin to manage all other plugins
-  let g:snippets_dir = "~/.vim/bundle/snipmate/snippets"
-  let g:html5_event_handler_attributes_complete = 0
-  let g:html5_rdfa_attributes_complete = 0
-  let g:html5_microdata_attributes_complete = 0
-  let g:html5_aria_attributes_complete = 0
+Bundle 'gmarik/vundle'
+
+Bundle 'FriendshipBracelet'
+Bundle 'Color-Sampler-Pack'
+Bundle 'larssmit/vim-getafe'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'csv.vim'
+Bundle 'tpope/vim-git'
+Bundle 'tpope/vim-haml'
+Bundle 'pangloss/vim-javascript'
+Bundle 'groenewege/vim-less'
+Bundle 'tpope/vim-markdown'
+Bundle 'mmalecki/vim-node.js'
+Bundle 'tpope/vim-rails'
+Bundle 'skwp/vim-rspec'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'cakebaker/scss-syntax.vim'
+Bundle 'timcharper/textile.vim'
+Bundle 'mileszs/ack.vim'
+Bundle 'jeetsukumaran/vim-buffergator'
+Bundle 'ap/vim-css-color'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-fugitive'
+Bundle 'mattn/gist-vim'
+Bundle 'sjl/gundo.vim'
+Bundle 'michaeljsmith/vim-indent-object'
+Bundle 'edsono/vim-matchit'
+Bundle 'chrisbra/NrrwRgn'
+Bundle 'rgarver/Kwbd.vim'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/nerdtree'
+Bundle 'vim-scripts/Rename2'
+Bundle 'garbas/vim-snipmate'
+Bundle 'honza/snipmate-snippets'
+Bundle 'ervandew/supertab'
+Bundle 'tpope/vim-surround'
+Bundle 'scrooloose/syntastic'
+Bundle 'majutsushi/tagbar'
+Bundle 'tomtom/tlib_vim'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'skalnik/vim-vroom'
+Bundle 'mattn/webapi-vim'
+Bundle 'ZoomWin'
+Bundle 'bigfish/vim-js-beautify'
+Bundle 'miripiruni/CSScomb-for-Vim'
+Bundle 'farneman/Expression-Engine-Vim-syntax'
 
 " ----------------------------------------------------------------------------
 "  Text Formatting
@@ -135,6 +174,7 @@ set guioptions=egmrt
 if has("gui_macvim")
   macmenu &File.New\ Tab key=<nop>
   map <D-t> :CommandT<CR>
+  map <D-t> <Plug>PeepOpen
 endif
 
 set ruler                  " show the cursor position all the time
