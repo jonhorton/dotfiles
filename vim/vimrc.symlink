@@ -11,8 +11,6 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
-Bundle 'FriendshipBracelet'
-Bundle 'Color-Sampler-Pack'
 Bundle 'larssmit/vim-getafe'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'csv.vim'
@@ -57,6 +55,8 @@ Bundle 'miripiruni/CSScomb-for-Vim'
 Bundle 'farneman/Expression-Engine-Vim-syntax'
 Bundle 'mattn/zencoding-vim'
 Bundle 'docunext/closetag.vim'
+Bundle 'shemerey/vim-peepopen'
+Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 
 filetype plugin indent on     " required!
  "
@@ -174,9 +174,9 @@ imap <D-/> <ESC><leader>c<space>
 " ----------------------------------------------------------------------------
 "  UI
 " ----------------------------------------------------------------------------
-colorscheme FriendshipBracelet
-syntax enable
-set guifont=Inconsolata:h14
+colorscheme Tomorrow-Night
+
+set guifont=SourceCodePro-Regular:h14
 set background=dark
 set anti
 set lines=999 columns=84
@@ -187,7 +187,7 @@ set guioptions=egmrt
 if has("gui_macvim")
   macmenu &File.New\ Tab key=<nop>
   map <D-t> :CommandT<CR>
-  map <D-t> <Plug>PeepOpen
+  map <D-t> <leader>p
 endif
 
 set ruler                  " show the cursor position all the time
