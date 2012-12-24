@@ -157,6 +157,9 @@ nmap <C-Down> ]e
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
 
+" nerdtree
+nmap <leader>n :NERDTreeToggle<cr>
+
 vmap <D-/> <leader>c<space> 
 nmap <D-/> <leader>c<space> 
 imap <D-/> <ESC><leader>c<space> 

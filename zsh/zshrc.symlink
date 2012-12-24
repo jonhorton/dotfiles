@@ -8,7 +8,7 @@ ZSH_CUSTOM=$DOTFILES/zsh/custom
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="gallois"
+ZSH_THEME="drewcode"
 
 # Example aliases
 alias zshconfig="mvim ~/.zshrc"
@@ -33,7 +33,7 @@ alias reload="source $ZSH/oh-my-zsh.sh"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rails ruby rbenv rake gem heroku github brew cloudapp npm osx pow rails3 rbenv terminalapp vi-mode)
+plugins=(git rails ruby rbenv rake gem heroku guard github brew cloudapp npm osx pow rails3 rbenv terminalapp prompt_wunjo_setup zgitinit vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
