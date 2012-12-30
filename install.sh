@@ -18,4 +18,6 @@ hash git >/dev/null && /usr/bin/env git clone --recursive https://github.com/dre
 cd $HOME/.dotfiles;
 echo "O" | rake install
 
+vim +BundleInstall +qall
+
 
