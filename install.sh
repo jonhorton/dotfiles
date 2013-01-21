@@ -67,4 +67,17 @@ echo "O" | rake install
 
 vim +BundleInstall +qall
 
+brew install mysql
+
+unset TMPDIR
+mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmp
+
+ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
+launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
+
+/usr/local/opt/mysql/bin/mysqladmin -u root password 'd33ps0uth@local'
+
+cd /usr/local/opt/mysql ; /usr/local/opt/mysql/bin/mysqld_safe &
+
+
 
