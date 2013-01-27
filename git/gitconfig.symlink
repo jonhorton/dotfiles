@@ -9,7 +9,7 @@
 # task.
 [user]
   name = Drew Delianides 
-	email = drew@drewco.de
+	email = drew@delianides.com
 [alias]
   co = checkout
   promote = !$ZSH/bin/git-promote
@@ -28,7 +28,7 @@
 [apply]
   whitespace = nowarn
 [github]
-  user = drewcode
+  user = delianides
 [mergetool]
   keepBackup = false
 	prompt = false
