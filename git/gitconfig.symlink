@@ -21,6 +21,7 @@
   diff = auto
   status = auto
   branch = auto
+  interactive = auto
 [core]
   excludesfile = ~/.gitignore
   editor = mvim
