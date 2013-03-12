@@ -33,7 +33,7 @@ alias reload="source $ZSH/oh-my-zsh.sh"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rails ruby rbenv rake gem heroku guard github brew cloudapp npm osx pow rails3 marked rbenv terminalapp prompt_wunjo_setup zgitinit vi-mode geeknote)
+plugins=(git rails ruby rbenv rake gem heroku guard github brew cloudapp npm osx pow rails3 marked rbenv terminalapp history-substring-search history prompt_wunjo_setup zgitinit vi-mode geeknote)
 
 source $ZSH/oh-my-zsh.sh
 
