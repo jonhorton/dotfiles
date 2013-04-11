@@ -1,18 +1,10 @@
-# Drew's dotfiles
-
-`Forked From Zach Holman's dotfiles`
+# Drew's dotfiles (from @holman)
 
 ## dotfiles
 
 Your dotfiles are how you personalize your system. These are mine. The very
 prejudiced mix: OS X, zsh, Ruby, Rails, git, homebrew, rbenv, vim. If you
 match up along most of those lines, you may dig my dotfiles.
-
-I was a little tired of having long alias files and everything strewn about
-(which is extremely common on other dotfiles projects, too). That led to this
-project being much more topic-centric. I realized I could split a lot of things
-up into the main areas I used (Ruby, git, system libraries, and so on), so I
-structured the project accordingly.
 
 If you're interested in the philosophy behind why projects like these are
 awesome, you might want to [read Zach Holman's post on the
