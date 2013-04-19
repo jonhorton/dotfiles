@@ -12,43 +12,38 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'csv.vim'
-Bundle 'tpope/vim-git'
-Bundle 'tpope/vim-haml'
 Bundle 'pangloss/vim-javascript'
 Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-markdown'
 Bundle 'mmalecki/vim-node.js'
+Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-rails'
-Bundle 'skwp/vim-rspec'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-rvm'
+Bundle 'skwp/vim-ruby-conque'
+Bundle 'wincent/Command-T'
+Bundle 'tomtom/tcomment_vim'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'cakebaker/scss-syntax.vim'
-Bundle 'timcharper/textile.vim' 
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'ap/vim-css-color' 
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-fugitive' 
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'michaeljsmith/vim-indent-object'
-Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree' 
-Bundle 'garbas/vim-snipmate' 
-Bundle 'honza/snipmate-snippets' 
 Bundle 'ervandew/supertab' 
 Bundle 'scrooloose/syntastic'
-Bundle 'tomtom/tlib_vim'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'skalnik/vim-vroom' 
-Bundle 'ZoomWin'
 Bundle 'maksimr/vim-jsbeautify'
 Bundle 'miripiruni/CSScomb-for-Vim'
 Bundle 'farneman/Expression-Engine-Vim-syntax'
-Bundle 'mattn/zencoding-vim'
-Bundle 'docunext/closetag.vim'
-Bundle 'shemerey/vim-peepopen'
 Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Bundle 'airblade/vim-gitgutter'
+
+" VIM Dependancy
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'rson/vim-conque'
 
 filetype plugin indent on     " required!
  "
@@ -73,7 +68,7 @@ set softtabstop=2          " yep, two
 set shiftwidth=2           " ..
 set tabstop=2
 set expandtab              " expand tabs to spaces
-set nosmarttab             " fuck tabs
+set nosmarttab             " no tabs
 set formatoptions+=n       " support for numbered/bullet lists
 "set textwidth=80           " wrap at 80 chars by default
 set virtualedit=block      " allow virtual edit in visual block ..
@@ -84,6 +79,22 @@ set virtualedit=block      " allow virtual edit in visual block ..
 
 " lead with ,
 let mapleader = ","
+
+map <Leader>h :CommandT<CR>
+map <Leader>vi :tabe ~/.vimrc<CR>
+map <Leader>bb :!bundle install<cr>
+nmap <Leader>bi :source ~/.vimrc<cr>:BundleInstall<cr>
+map <Leader>te :!bundle exec rspec %:p:h:h<CR>
+
+" Cmd-Shift-R Rake Test
+nmap <silent> <D-R> :call RunRakeConque()<CR>
+" Cmd-Shift-F for RSpec
+nmap <silent> <D-F> :call RunRspecCurrentFileConque()<CR>
+" Cmd-Shift-L for RSpec Current Line
+nmap <silent> <D-L> :call RunRspecCurrentLineConque()<CR>
+" ,Cmd-R for Last conque command
+nmap <silent> ,<D-R> :call RunLastConqueCommand()<CR>
+
 
 " exit to normal mode with 'jj'
 inoremap jj <ESC>
@@ -143,18 +154,18 @@ nmap <leader>b :JSBeautify<cr>
 
 " Emulate Textmate Swap Lines
 " Bubble single lines
-nmap <C-Up> [e
-nmap <C-Down> ]e
+nmap <leader><Up> [e
+nmap <leader><Down> ]e
 " Bubble multiple lines
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
+vmap <leader><Up> [egv
+vmap <leader><Down> ]egv
 
 " nerdtree
 map <C-n> :NERDTreeToggle<cr>
 
-vmap <D-/> <leader>c<space> 
-nmap <D-/> <leader>c<space> 
-imap <D-/> <ESC><leader>c<space> 
+vmap <D-/> gcc<left> 
+nmap <D-/> gcc<left> 
+imap <D-/> <ESC>gcc<left> 
 " ----------------------------------------------------------------------------
 " JS BEAUTIFY
 " ----------------------------------------------------------------------------

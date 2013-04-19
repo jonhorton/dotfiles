@@ -15,6 +15,14 @@ alias zshconfig="mvim ~/.zshrc"
 alias ohmyzsh="mvim ~/.oh-my-zsh"
 alias reload="source $ZSH/oh-my-zsh.sh"
 
+# Search backwards and forwards with a pattern
+bindkey -M vicmd '/' history-incremental-pattern-search-backward
+bindkey -M vicmd '?' history-incremental-pattern-search-forward
+
+# set up for insert mode too
+bindkey -M viins '^R' history-incremental-pattern-search-backward
+bindkey -M viins '^F' history-incremental-pattern-search-forward
+
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -33,7 +41,7 @@ alias reload="source $ZSH/oh-my-zsh.sh"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rails ruby rbenv rake gem heroku guard github brew cloudapp npm osx pow rails3 marked rbenv terminalapp history-substring-search history prompt_wunjo_setup zgitinit vi-mode geeknote)
+plugins=(git rails ruby rbenv rake gem heroku guard github brew cloudapp npm osx pow rails3 marked rbenv terminalapp history-substring-search history prompt_wunjo_setup zgitinit geeknote)
 
 source $ZSH/oh-my-zsh.sh
 
