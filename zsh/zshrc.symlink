@@ -14,6 +14,7 @@ ZSH_THEME="drewcode"
 alias zshconfig="mvim ~/.zshrc"
 alias ohmyzsh="mvim ~/.oh-my-zsh"
 alias reload="source $ZSH/oh-my-zsh.sh"
+alias nssh="ssh drew@67.207.152.244"
 
 # Search backwards and forwards with a pattern
 bindkey -M vicmd '/' history-incremental-pattern-search-backward

@@ -32,7 +32,7 @@ Bundle 'ap/vim-css-color'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'michaeljsmith/vim-indent-object'
-Bundle 'scrooloose/nerdtree' 
+Bundle 'scrooloose/nerdtree'
 Bundle 'ervandew/supertab' 
 Bundle 'scrooloose/syntastic'
 Bundle 'maksimr/vim-jsbeautify'
@@ -40,6 +40,8 @@ Bundle 'miripiruni/CSScomb-for-Vim'
 Bundle 'farneman/Expression-Engine-Vim-syntax'
 Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Bundle 'airblade/vim-gitgutter'
+Bundle 'nono/vim-handlebars'
+Bundle 'chooh/brightscript.vim'
 
 " VIM Dependancy
 Bundle 'MarcWeber/vim-addon-mw-utils'
