@@ -45,9 +45,10 @@ bindkey -M viins '^F' history-incremental-pattern-search-forward
 plugins=(git rails ruby rbenv rake gem heroku guard github brew cloudapp npm osx pow rails3 marked rbenv terminalapp history-substring-search history prompt_wunjo_setup zgitinit geeknote)
 
 source $ZSH/oh-my-zsh.sh
+source ~/.env
 
 # Customize to your needs...
-export PATH=/Users/drew.delianides/.rbenv/shims:/Users/drew.delianides/.rbenv/bin:./bin:/Users/drew.delianides/.rbenv/shims:/usr/local/bin:/usr/local/sbin:/Users/drew.delianides/.sfs:/Users/drew.delianides/.dotfiles/bin:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH=/Users/drew.delianides/.rbenv/shims:/Users/drew.delianides/.rbenv/bin:./bin:/Users/drew.delianides/.rbenv/shims:/usr/local/bin:/usr/local/sbin:/Users/drew.delianides/.sfs:/Users/drew.delianides/.dotfiles/bin:/usr/bin:/bin:/usr/sbin:/sbin:
 export CC=/usr/bin/gcc-4.2
 export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules
 
