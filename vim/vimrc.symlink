@@ -11,28 +11,46 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
-" Utilities 
+" Utilities
+"
+"closes code blocks
 Bundle 'tpope/vim-endwise'
+"git support in vim
 Bundle 'tpope/vim-fugitive'
+"complete surrounding in pairs
 Bundle 'tpope/vim-surround'
+"rvm for vim
 Bundle 'tpope/vim-rvm'
+"run ruby scripts
 Bundle 'skwp/vim-ruby-conque'
-Bundle 'wincent/Command-T'
+"commenting in vim based on syntax
 Bundle 'tomtom/tcomment_vim'
+"supercharge vim buffer
 Bundle 'jeetsukumaran/vim-buffergator'
-Bundle 'ap/vim-css-color' 
-Bundle 'mattn/webapi-vim'
+"highlight hex colors numbers in css
+Bundle 'ap/vim-css-color'
+"upload document to github gist service
 Bundle 'mattn/gist-vim'
+"zen coding
 Bundle 'mattn/zencoding-vim'
-Bundle 'michaeljsmith/vim-indent-object'
+"sidebar project view
 Bundle 'scrooloose/nerdtree'
-Bundle 'ervandew/supertab' 
+"autocomplete
+Bundle 'ervandew/supertab'
+"support different syntax
 Bundle 'scrooloose/syntastic'
+"js unminify js/html
 Bundle 'maksimr/vim-jsbeautify'
+"format for csscomb
 Bundle 'miripiruni/CSScomb-for-Vim'
+"theme
 Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+"left side line number git diff
 Bundle 'airblade/vim-gitgutter'
+"colorful bottom vim bottom
 Bundle 'bling/vim-airline'
+"shows bad whitespace
+Bundle 'bitc/vim-bad-whitespace'
 
 " Languages
 Bundle "othree/html5.vim"
@@ -53,6 +71,8 @@ Bundle 'StanAngeloff/php.vim'
 " VIM Dependancy
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'rson/vim-conque'
+Bundle 'mattn/webapi-vim'
+
 
 filetype plugin indent on     " required!
  "
@@ -93,6 +113,7 @@ map <Leader>h :CommandT<CR>
 map <Leader>vi :tabe ~/.vimrc<CR>
 map <Leader>bb :!bundle install<cr>
 nmap <Leader>bi :source ~/.vimrc<cr>:BundleInstall<cr>
+nmap <Leader>wi :EraseBadWhitespace<CR>
 map <Leader>te :!bundle exec rspec %:p:h:h<CR>
 
 " Cmd-Shift-R Rake Test
@@ -125,9 +146,6 @@ vnoremap <Up> gk
 inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
 
-" Open Command+T in a new tab
-let g:CommandTAcceptSelectionTabMap='<CR>'
-
 " C-TAB and C-SHIFT-TAB cycle tabs forward and backward
 nmap <c-tab> :tabnext<cr>
 imap <c-tab> <c-o>:tabnext<cr>
@@ -159,7 +177,6 @@ nmap <D-]> >>
 vmap <D-[> <gv
 vmap <D-]> >gv
 
-nmap <leader>b :JSBeautify<cr>
 
 " Emulate Textmate Swap Lines
 " Bubble single lines
@@ -172,9 +189,9 @@ vmap <leader><Down> ]egv
 " nerdtree
 map <C-n> :NERDTreeToggle<cr>
 
-vmap <D-/> gcc<left> 
-nmap <D-/> gcc<left> 
-imap <D-/> <ESC>gcc<left> 
+vmap <D-/> gcc<left>
+nmap <D-/> gcc<left>
+imap <D-/> <ESC>gcc<left>
 " ----------------------------------------------------------------------------
 " JS BEAUTIFY
 " ----------------------------------------------------------------------------
