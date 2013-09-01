@@ -51,6 +51,8 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'bling/vim-airline'
 "shows bad whitespace
 Bundle 'bitc/vim-bad-whitespace'
+"command-T awesomeness
+Bundle "wincent/Command-T"
 
 " Languages
 Bundle "othree/html5.vim"
@@ -109,12 +111,13 @@ set virtualedit=block      " allow virtual edit in visual block ..
 " lead with ,
 let mapleader = ","
 
-map <Leader>h :CommandT<CR>
+map <leader>t :CommandT<CR>
 map <Leader>vi :tabe ~/.vimrc<CR>
 map <Leader>bb :!bundle install<cr>
 nmap <Leader>bi :source ~/.vimrc<cr>:BundleInstall<cr>
 nmap <Leader>wi :EraseBadWhitespace<CR>
 map <Leader>te :!bundle exec rspec %:p:h:h<CR>
+map <leader>s :call StripWhitespace ()<CR>
 
 " Cmd-Shift-R Rake Test
 nmap <silent> <D-R> :call RunRakeConque()<CR>
@@ -215,13 +218,6 @@ set lines=999 columns=84
 set linespace=4
 set guioptions=egmrt
 
-" Command + t to :CommandT
-if has("gui_macvim")
-  macmenu &File.New\ Tab key=<nop>
-  map <D-t> :CommandT<CR>
-  map <D-t> <leader>p
-endif
-
 set ruler                  " show the cursor position all the time
 set noshowcmd              " don't display incomplete commands
 set nolazyredraw           " turn off lazy redraw
@@ -255,4 +251,3 @@ set visualbell             " shut the fuck up
 function! StripWhitespace ()
     exec ':%s/ \+$//gc'
 endfunction
-map ,s :call StripWhitespace ()<CR>
