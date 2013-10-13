@@ -16,6 +16,10 @@ alias ohmyzsh="mvim ~/.oh-my-zsh"
 alias reload="source $ZSH/oh-my-zsh.sh"
 alias nssh="ssh drew@67.207.152.244"
 
+alias vup="vagrant up"
+alias vdown="vagrant destroy"
+alias vpr="vagrant provision"
+
 # Search backwards and forwards with a pattern
 bindkey -M vicmd '/' history-incremental-pattern-search-backward
 bindkey -M vicmd '?' history-incremental-pattern-search-forward
