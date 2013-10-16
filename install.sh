@@ -42,11 +42,6 @@ curl -OL https://github.com/chriskempson/tomorrow-theme/archive/master.zip > mas
 cd tomorrow-theme-master/OS\ X\ Terminal/     
 open Tomorrow\ Night.terminal
 
-#Install Xcode Theme
-cd ../Xcode\ 4/
-mkdir -p ~/Library/Developer/Xcode/UserData/FontAndColorThemes
-mv Tomorrow\ Night.dvtcolortheme ~/Library/Developer/Xcode/UserData/FontAndColorThemes/
-
 #Download Font
 curl -LO http://downloads.sourceforge.net/project/sourcecodepro.adobe/SourceCodePro_FontsOnly-1.017.zip && unzip Source*.zip && rm Source*.zip
 cd Source*/TTF && mv * ~/Library/Fonts/      
@@ -60,7 +55,7 @@ fi
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh;
 
 echo "\033[0;34mCloning dotfiles...\033[0m"
-hash git >/dev/null && /usr/bin/env git clone --recursive https://github.com/drewcode/dotfiles.git ~/.dotfiles || die "Git not installed!"
+hash git >/dev/null && /usr/bin/env git clone --recursive https://github.com/delianides/dotfiles.git ~/.dotfiles || die "Git not installed!"
 
 cd $HOME/.dotfiles;
 echo "O" | rake install
